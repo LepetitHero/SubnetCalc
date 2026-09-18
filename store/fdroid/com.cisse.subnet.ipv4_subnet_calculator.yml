@@ -8,8 +8,8 @@ Categories:
   - System
 License: MIT
 AuthorName: CISSE Alassane
-SourceCode: https://github.com/<a-remplacer>/ipv4_subnet_calculator
-IssueTracker: https://github.com/<a-remplacer>/ipv4_subnet_calculator/issues
+SourceCode: https://github.com/LepetitHero/SubnetCalc
+IssueTracker: https://github.com/LepetitHero/SubnetCalc/issues
 
 AutoName: SubnetCalc
 Summary: Calculateur de sous-reseaux IPv4, VLSM et regroupement
@@ -22,7 +22,7 @@ Description: |
   hors-ligne, aucune donnee collectee.
 
 RepoType: git
-Repo: https://github.com/<a-remplacer>/ipv4_subnet_calculator.git
+Repo: https://github.com/LepetitHero/SubnetCalc.git
 
 Builds:
   - versionName: '1.0.0'
