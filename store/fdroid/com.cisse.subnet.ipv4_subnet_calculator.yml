@@ -1,0 +1,47 @@
+# Brouillon de recipe F-Droid. A affiner lors de la revue par les
+# mainteneurs F-Droid (le format exact peut evoluer selon fdroidserver).
+# A soumettre via une merge request sur https://gitlab.com/fdroid/fdroiddata
+# une fois le depot source rendu public.
+
+Categories:
+  - Science & Education
+  - System
+License: MIT
+AuthorName: CISSE Alassane
+SourceCode: https://github.com/<a-remplacer>/ipv4_subnet_calculator
+IssueTracker: https://github.com/<a-remplacer>/ipv4_subnet_calculator/issues
+
+AutoName: SubnetCalc
+Summary: Calculateur de sous-reseaux IPv4, VLSM et regroupement
+Description: |
+  SubnetCalc calcule les informations d'un sous-reseau IPv4 (adresse
+  reseau, broadcast, plage utilisable, nombre d'hotes, masque, wildcard),
+  avec vue binaire et classification d'adresse. Inclut un mode VLSM
+  (decoupage en N sous-reseaux egaux ou par besoins en hotes) et un
+  regroupement de reseaux (supernetting). Fonctionne entierement
+  hors-ligne, aucune donnee collectee.
+
+RepoType: git
+Repo: https://github.com/<a-remplacer>/ipv4_subnet_calculator.git
+
+Builds:
+  - versionName: '1.0.0'
+    versionCode: 1
+    commit: v1.0.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y curl git unzip xz-utils
+    init:
+      - curl -o flutter.tar.xz https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.35.5-stable.tar.xz
+      - tar xf flutter.tar.xz
+      - export PATH="$PATH:$PWD/flutter/bin"
+      - flutter pub get
+    gradle:
+      - yes
+    output: ../build/app/outputs/flutter-apk/app-release-unsigned.apk
+
+AutoUpdateMode: None
+UpdateCheckMode: Tags
+CurrentVersion: '1.0.0'
+CurrentVersionCode: 1
