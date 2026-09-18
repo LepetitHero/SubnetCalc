@@ -34,4 +34,4 @@ flutter run
 
 ## Licence
 
-MIT, voir [LICENSE](LICENSE).
+GPL-3.0, voir [LICENSE](LICENSE).
